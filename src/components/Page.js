@@ -6,7 +6,7 @@ import MyTreesPage from './MyTreesPage';
 
 const Page = ({ currentPage }) => {
   const [myTrees, setMyTrees] = useState([]);
-
+  const [metamaskAddress, setMetamaskAddress] = useState('');
   const handleGetTree = (tree) => {
     setMyTrees((prevTrees) => [...prevTrees, tree]);
 
@@ -27,10 +27,35 @@ const Page = ({ currentPage }) => {
     }
   };
 
+  const truncateAddress = (address) => {
+    const start = address.slice(0, 6);
+    const end = address.slice(address.length - 4);
+    return `${start}...${end}`;
+  };
+
+  const handleMetaMaskButtonClick = () => {
+    if (window.ethereum) {
+      window.ethereum.enable()
+        .then((accounts) => {
+          console.log('MetaMask is enabled');
+          console.log('Connected account:', accounts[0]);
+          setMetamaskAddress(accounts[0]);
+        })
+        .catch((error) => {
+          console.log('Failed to enable MetaMask:', error);
+        });
+    } else {
+      console.log('MetaMask is not installed');
+    }
+  };
+
+
   return (
     <div className="page">
       {getPageContent()}
-      <button className="MetaMask">MetaMask</button>
+      <button className="MetaMask" onClick={handleMetaMaskButtonClick}>
+        {metamaskAddress ? truncateAddress(metamaskAddress) : 'Connect MetaMask'}
+      </button>
     </div>
   );
 };

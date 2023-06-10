@@ -1,0 +1,44 @@
+.page {
+  padding: 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  text-align: center;
+}
+.trees-page {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.tree-card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+}
+
+.tree-image {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+}
+
+.get-tree-button {
+  width: 100%;
+  max-width: 300px;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #ffcc00;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.get-tree-button:hover {
+  background-color: #00e600;
+}

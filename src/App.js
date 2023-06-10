@@ -1,25 +1,48 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from 'react';
+import Sidebar from './components/Sidebar';
+import Page from './components/Page';
+import './app.css';
 
-function App() {
+// const App = () => {
+//   const [currentPage, setCurrentPage] = useState('MY TREES');
+
+//   const setPage = (page) => {
+//     setCurrentPage(page);
+//   };
+
+//   return (
+//     <div className="app">
+//       <Sidebar setPage={setPage} />
+//       <Page currentPage={currentPage} />
+//     </div>
+//   );
+// };
+
+// export default App;
+const App = () => {
+  const [currentPage, setCurrentPage] = useState('MY TREES');
+  const [sidebarVisible, setSidebarVisible] = useState(true);
+
+  const handleMouseEnter = () => {
+    setSidebarVisible(true);
+  };
+
+  const handleMouseLeave = (event) => {
+    if (event.pageX < 50) {
+      setSidebarVisible(false);
+    }
+  };
+
+  const setPage = (page) => {
+    setCurrentPage(page);
+  };
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="app" onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
+      <Sidebar setPage={setPage} hidden={!sidebarVisible} />
+      <Page currentPage={currentPage} />
     </div>
   );
-}
+};
 
 export default App;

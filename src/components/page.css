@@ -6,6 +6,22 @@
   height: 100vh;
   text-align: center;
 }
+
+.MetaMask{
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 100%;
+  max-width: 150px;
+  margin-top: 10px;
+  padding: 10px;
+  background-color: #7c1c05;
+  color: #ffffff;
+  border: none;
+  border-radius: 5px;
+  font-size: 16px;
+  cursor: pointer;
+}
 .trees-page {
   display: flex;
   flex-wrap: wrap;

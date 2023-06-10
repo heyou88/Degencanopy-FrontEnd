@@ -4,6 +4,7 @@ const MyTreesPage = () => {
   return (
     <div className="My-trees-page">
     <h1>MY TREE</h1>
+    
     </div>
   );
 };

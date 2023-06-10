@@ -1,38 +1,33 @@
 import React from 'react';
 import './page.css';
-import treeImage1 from './tree-images/groot blue 1 other.png';
+import treeImages from './treedata';
 
-// Import all tree images from the "tree-images" folder
+const TreesPage = ({ handleGetTree }) => {
+  const getRandomImage = () => {
+    const randomIndex = Math.floor(Math.random() * treeImages.length);
+    return treeImages[randomIndex].image;
+  };
 
-const TreesPage = ({ trees }) => {
+  const handleButtonClick = () => {
+    const randomImage = getRandomImage();
+    const tree = {
+      image: randomImage,
+      name: 'Random Tree',
+      description: 'This is a random tree',
+    };
+    handleGetTree(tree);
+  };
+
   return (
     <div className="trees-page">
       <div className="tree-card">
-        <img src={treeImage1} className="tree-image" alt="Tree 1" />
-        <button className="get-tree-button">Get IT!</button>
+        <img src={getRandomImage()} className="tree-image" alt="Random Tree" />
+        <button className="get-tree-button" onClick={handleButtonClick}>
+          Get It!
+        </button>
       </div>
-      {/* Add more tree cards as needed */}
     </div>
   );
 };
 
 export default TreesPage;
-// import React from 'react';
-// import './page.css';
-
-// const TreesPage = ({ trees, handleGetTree }) => {
-//   return (
-//     <div className="trees-page">
-//       {trees.map((tree, index) => (
-//         <div key={index} className="tree-card">
-//           <img src={tree.image} className="tree-image" alt={tree.name} />
-//           <button className="get-tree-button" onClick={() => handleGetTree(tree)}>
-//             Get It!
-//           </button>
-//         </div>
-//       ))}
-//     </div>
-//   );
-// };
-
-// export default TreesPage;

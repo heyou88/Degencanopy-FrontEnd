@@ -1,17 +1,6 @@
-// import React from 'react';
-// import './page.css';
-// const MyTreesPage = () => {
-//   return (
-//     <div className="My-trees-page">
-//     <h1>MY TREE</h1>
-
-//     </div>
-//   );
-// };
-
-// export default MyTreesPage;
 import React, { useEffect, useState } from 'react';
 import './page.css';
+import treeImages from './treedata';
 
 const MyTreesPage = () => {
   const [nftData, setNftData] = useState(null);
@@ -39,10 +28,14 @@ const MyTreesPage = () => {
 
   return (
     <div className="My-trees-page">
-      <h1>MY TREE</h1>
+      <h1 className='My-tree-headline'>MY TREE</h1>
+          <div>
+            <button className='water-button'>Water Tree</button>
+          </div>
       {nftData && (
         <div>
           <h2>NFT Details:</h2>
+
           <pre>{JSON.stringify(nftData, null, 2)}</pre>
         </div>
       )}

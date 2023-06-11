@@ -5,10 +5,10 @@ import TreesPage from './Trees';
 import MyTreesPage from './MyTreesPage';
 
 const Page = ({ currentPage }) => {
-  const [myTrees, setMyTrees] = useState([]);
+  // const [myTrees, setMyTrees] = useState([]);
   const [metamaskAddress, setMetamaskAddress] = useState('');
   const handleGetTree = (tree) => {
-    setMyTrees((prevTrees) => [...prevTrees, tree]);
+    // setMyTrees((prevTrees) => [...prevTrees, tree]);
 
   };
 

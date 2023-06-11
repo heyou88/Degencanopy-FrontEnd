@@ -1,30 +1,48 @@
-import React from 'react';
+// import React from 'react';
 import './page.css';
-import treeImages from './treedata';
+import treeData from './treedata1';
 
-const TreesPage = ({ handleGetTree }) => {
-  const getRandomImage = () => {
-    const randomIndex = Math.floor(Math.random() * treeImages.length);
-    return treeImages[randomIndex].image;
-  };
-
-  const handleButtonClick = () => {
-    const randomImage = getRandomImage();
-    const tree = {
-      image: randomImage,
-      name: 'Random Tree',
-      description: 'This is a random tree',
-    };
-    handleGetTree(tree);
-  };
-
+const TreesPage = () => {
   return (
-    <div className="trees-page">
-      <div className="tree-card">
-        <img src={getRandomImage()} className="tree-image" alt="Random Tree" />
-        <button className="get-tree-button" onClick={handleButtonClick}>
-          Get It!
-        </button>
+    <div className="My-trees-page">
+      <h1 className="My-tree-headline">GET A TREE</h1>
+      <div className="tree-container">
+        <div className="tree-card">
+          {treeData.blueTree.map((tree) => (
+            <div key={tree.id}>
+              {tree.id === 1 && (
+                <>
+                  <img src={tree.image} className="tree-image active" alt="Blue Tree" />
+                  <button className="get-tree-button">Got It</button>
+                </>
+              )}
+            </div>
+          ))}
+        </div>
+        <div className="tree-card">
+          {treeData.greenTree.map((tree) => (
+            <div key={tree.id}>
+              {tree.id === 1 && (
+                <>
+                  <img src={tree.image} className="tree-image active" alt="Green Tree" />
+                  <button className="get-tree-button">Got It</button>
+                </>
+              )}
+            </div>
+          ))}
+        </div>
+        <div className="tree-card">
+          {treeData.redTree.map((tree) => (
+            <div key={tree.id}>
+              {tree.id === 1 && (
+                <>
+                  <img src={tree.image} className="tree-image active" alt="Red Tree" />
+                  <button className="get-tree-button">Got It</button>
+                </>
+              )}
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );

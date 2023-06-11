@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import './page.css';
 import TreesPage from './Trees';
 import MyTreesPage from './MyTreesPage';
+import WaterPage from './waterPage';
 
 const Page = ({ currentPage }) => {
   // const [myTrees, setMyTrees] = useState([]);
@@ -17,9 +18,9 @@ const Page = ({ currentPage }) => {
       case 'GET A TREE':
         return <TreesPage  handleGetTree={handleGetTree} />;
       case 'MY TREES':
-        return <MyTreesPage/>
+        return <MyTreesPage/>;
       case 'GET WATER':
-        return <h2>Water the tree</h2>;
+        return <WaterPage/>;
       case 'LOTTERY':
         return <h2>Try your luck</h2>;
       default:

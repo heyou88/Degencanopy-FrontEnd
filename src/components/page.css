@@ -45,10 +45,10 @@
 
 .get-tree-button {
   width: 100%;
-  max-width: 300px;
+  max-width: 200px;
   margin-top: 40px;
   padding: 10px;
-  background-color: #ffcc00;
+  background-color: #15ff00;
   color: #ffffff;
   border: none;
   border-radius: 5px;
@@ -57,7 +57,7 @@
 }
 
 .get-tree-button:hover {
-  background-color: #00e600;
+  background-color: #022102;
 }
 
 .My-trees-page {
@@ -118,7 +118,7 @@
 }
 
 .water-button:hover {
-  background-color: #013a5b;
+  background-color: #02111a;
 }
 
 .water-button:focus {
@@ -139,4 +139,26 @@
 }
 get-water-button:hover {
   background-color: #0051e6;
+}
+
+.lottery-button {
+  display: inline-block;
+  padding: 10px 20px;
+  font-size: 16px;
+  background-color: #722503;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.lottery-button:hover {
+  background-color: #e50606;
+}
+
+.lottery-button:focus {
+  outline: none;
+}
+.button-gap {
+  margin-right: 10px; /* Adjust the value as needed */
 }

@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import './page.css';
 function LotteryView() {
   const [lotteryResult, setLotteryResult] = useState(null);
 
@@ -25,18 +25,18 @@ function LotteryView() {
 
   return (
     <div>
-      <h1>Lottery View</h1>
-      <button onClick={registerTree}>Register a Tree</button>
-      <button onClick={triggerLottery}>Trigger the Lottery</button>
+      <button className="lottery-button" onClick={registerTree}>Register a Tree</button>
+      <span className="button-gap" />
+      <button className="lottery-button" onClick={triggerLottery}>Trigger the Lottery</button>
       {lotteryResult === "won" && (
         <div>
-          <h2>YOU WON</h2>
-          <button onClick={redeemPrize}>Redeem</button>
+          <h2>YOU WON !</h2>
+          <button className="lottery-button" onClick={redeemPrize}>Redeem</button>
         </div>
       )}
       {lotteryResult === "lost" && (
         <div>
-          <h2>YOU DIDN'T WIN THIS TIME</h2>
+          <h2>SORRY,YOU DIDN'T WIN THIS TIME</h2>
           <p>Try growing your tree to improve your chances and try again next week</p>
         </div>
       )}

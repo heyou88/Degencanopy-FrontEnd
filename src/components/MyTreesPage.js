@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './page.css';
-import treeImages from './treedata';
+
 
 const MyTreesPage = () => {
   const [nftData, setNftData] = useState(null);

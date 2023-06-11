@@ -105,6 +105,26 @@
   height: auto;
 }
 
+.water-button {
+  width: 200px;
+  padding: 10px;
+  margin-top: 20px;
+  background-color: #4caf50;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.water-button:hover {
+  background-color: #013a5b;
+}
+
+.water-button:focus {
+  outline: none;
+}
+
 .get-water-button {
   width: 100%;
   max-width: 300px;

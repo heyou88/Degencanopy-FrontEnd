@@ -3,6 +3,7 @@ import React, { useState } from 'react';
 import './page.css';
 import TreesPage from './Trees';
 import MyTreesPage from './MyTreesPage';
+import Lottery  from './Lottery';
 import WaterPage from './waterPage';
 
 const Page = ({ currentPage }) => {
@@ -22,7 +23,7 @@ const Page = ({ currentPage }) => {
       case 'GET WATER':
         return <WaterPage/>;
       case 'LOTTERY':
-        return <h2>Try your luck</h2>;
+        return <Lottery/>;
       default:
         return null;
     }

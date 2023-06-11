@@ -162,3 +162,24 @@ get-water-button:hover {
 .button-gap {
   margin-right: 10px; /* Adjust the value as needed */
 }
+
+.lottery-view {
+  text-align: center;
+}
+
+.lottery-image {
+  display: block;
+  margin: 0 auto;
+  max-width: 300px; /* Adjust the width as needed */
+  margin-bottom: 20px; /* Adjust the spacing as needed */
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px; /* Adjust the spacing as needed */
+}
+
+.lottery-button {
+  margin: 0 10px; /* Adjust the spacing as needed */
+}

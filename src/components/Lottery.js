@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import './page.css';
+import lottery from './tree-images/lottery.png';
 function LotteryView() {
   const [lotteryResult, setLotteryResult] = useState(null);
 
@@ -24,10 +25,12 @@ function LotteryView() {
   };
 
   return (
-    <div>
-      <button className="lottery-button" onClick={registerTree}>Register a Tree</button>
-      <span className="button-gap" />
-      <button className="lottery-button" onClick={triggerLottery}>Trigger the Lottery</button>
+    <div className="lottery-view">
+      <img src={lottery} className="lottery-image" alt="lottery" />
+      <div className="button-container">
+        <button className="lottery-button" onClick={registerTree}>Register a Tree</button>
+        <button className="lottery-button" onClick={triggerLottery}>Trigger the Lottery</button>
+      </div>
       {lotteryResult === "won" && (
         <div>
           <h2>YOU WON !</h2>
@@ -36,7 +39,7 @@ function LotteryView() {
       )}
       {lotteryResult === "lost" && (
         <div>
-          <h2>SORRY,YOU DIDN'T WIN THIS TIME</h2>
+          <h2>SORRY, YOU DIDN'T WIN THIS TIME</h2>
           <p>Try growing your tree to improve your chances and try again next week</p>
         </div>
       )}

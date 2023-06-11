@@ -60,6 +60,39 @@
   background-color: #00e600;
 }
 
-.My-tree-headline{
-  top:10px;
+.My-trees-page {
+  text-align: center;
+}
+
+.tree-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin-top: 20px;
+}
+
+.tree-card {
+  width: 300px;
+  margin: 10px;
+}
+
+.tree-image {
+  width: 100%;
+  height: auto;
+}
+
+.water-button {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+  padding: 8px 16px;
+  background-color: #ddd;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.water-button:hover {
+  background-color: #ccc;
 }

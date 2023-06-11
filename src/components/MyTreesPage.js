@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import './page.css';
-
+import treeImages from './treedata';
 
 const MyTreesPage = () => {
   const [nftData, setNftData] = useState(null);
@@ -28,10 +28,15 @@ const MyTreesPage = () => {
 
   return (
     <div className="My-trees-page">
-      <h1 className='My-tree-headline'>MY TREE</h1>
-          <div>
-            <button className='water-button'>Water Tree</button>
+      <h1 className='My-tree-headline'>MY TREES</h1>
+      <div className="tree-container">
+        {treeImages.slice(0, 3).map((tree, index) => (
+          <div className="tree-card" key={index}>
+            <img src={tree.image} className="tree-image" alt="Tree" />
+            <button className="water-button">Water It</button>
           </div>
+        ))}
+      </div>
       {nftData && (
         <div>
           <h2>NFT Details:</h2>
